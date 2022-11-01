@@ -1,13 +1,14 @@
 //API "http://www.omdbapi.com/?i=tt3896198&apikey=f7efe69"
 
 async function main() {
-  const movies = await fetch(`https://www.omdbapi.com/?apikey=f7efe69&s=fast`);
+  const searchTerm = document.getElementById('input_id').value
+  const movies = await fetch(`https://www.omdbapi.com/?apikey=f7efe69&s=${searchTerm || 'Fast'}`);
   const moviesData = await movies.json();
   const moviesListEL = document.querySelector(".movies");
   moviesListEL.innerHTML = moviesData.Search.map((movie) =>movieHTML(movie)).join("");
 }
 
-main();
+document.getElementById('searchBtn').addEventListener('click', main)
 
 
 function movieHTML(movie) {
