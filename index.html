@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>movie search</title>
+    <link rel="stylesheet" href="styles.css" />
+    <script src="./index.js"></script>
+    <script
+      src="https://kit.fontawesome.com/08fa670fbb.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <section id="landing__page">
+      <nav>
+        <div class="nav__container">
+          <img
+            src="./assets/logo-removebg-preview.png"
+            class="logo"
+            alt="logo"
+          />
+          <ul class="nav__links">
+            <li><a href="#" class="nav__link">Home</a></li>
+            <li><a href="#" class="nav__link">Search</a></li>
+            <li>
+              <a href="#" class="nav__link nav__link--primary">Popular</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+      <header>
+        <div class="header__container">
+          <div class="header__description">
+            <h1 class="header__description--title">
+              Thousands of Movies to discover with
+              <span class="text--red">Flicks</span>
+            </h1>
+          </div>
+          <form action="" class="search__bar">
+            <input type="text" id="input_id"  placeholder="search any movie." />
+            <button type="submit" id="searchBtn">
+              <i class="fa-solid fa-magnifying-glass" onclick="search()"></i>
+            </button>
+          </form>
+        </div>
+        <div class="movies__container">
+        <div class="movies">
+            <div class="movie">
+                 <div class="movie__img--wrapper">
+                    <img class="poster" src="./assets/Avenegers.jpg" alt="">
+                </div>
+            </div> 
+        </div>
+    </div>
+      </header>
+    </section>
+    
+    
+    <footer>
+      <div class="row footer_row">
+        <a href="#" class="footer_anchor">
+          <figure class="footer_logo">
+            <img
+              src="./assets/logo-removebg-preview.png"
+              class="logo1"
+              alt=""
+            />
+          </figure>
+          <span class="footer_logo--popper">
+            Top↑
+            <i class="fas fa-arrrow-up"></i>
+          </span>
+        </a>
+        <div class="footer_social--list">
+          <a
+            href="https://github.com/connor0523"
+            target="_blank"
+            class="footer_social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >GitHub</a
+          >
+          <a
+            href="https://www.linkedin.com/in/connor-ellis-46b7b6253/"
+            target="_blank"
+            class="footer_social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            >LinkedIn</a
+          >
+          <a
+            href="#"
+            onclick="toggleModal()"
+            class="footer_social--link link__hover-effect link__hover-effect--white"
+            >Contact</a
+          >
+          <!-- FILL RESUME HERE--> 
+           <a
+            href=""
+            target="_blank"
+            class="footer_social--link link__hover-effect link__hover-effect--white"
+            target="_blank"
+            download
+            >Resume</a
+          >
+        </div>
+        <div class="footer_copyright">Copyright© 2022 Connor Ellis</div>
+      </div>
+    </footer>
+  </body>
+</html>
