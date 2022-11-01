@@ -2,13 +2,14 @@
 
 async function main() {
   const searchTerm = document.getElementById('input_id').value
-  const movies = await fetch(`https://www.omdbapi.com/?apikey=f7efe69&s=${searchTerm || 'Fast'}`);
+  const movies = await fetch(`https://www.omdbapi.com/?apikey=f7efe69&s=${searchTerm}`);
   const moviesData = await movies.json();
   const moviesListEL = document.querySelector(".movies");
   moviesListEL.innerHTML = moviesData.Search.map((movie) =>movieHTML(movie)).join("");
 }
 
 document.getElementById('searchBtn').addEventListener('click', main)
+document.getElementById('form').addEventListener('submit', e => e.preventDefault())
 
 
 function movieHTML(movie) {
