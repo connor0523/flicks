@@ -5,8 +5,10 @@ async function main() {
   const movies = await fetch(`https://www.omdbapi.com/?apikey=f7efe69&s=${searchTerm}`);
   const moviesData = await movies.json();
   const moviesListEL = document.querySelector(".movies");
+  console.log(moviesData)
   moviesListEL.innerHTML = moviesData.Search.map((movie) =>movieHTML(movie)).join("");
 }
+
 
 document.getElementById('searchBtn').addEventListener('click', main)
 document.getElementById('form').addEventListener('submit', e => e.preventDefault())
